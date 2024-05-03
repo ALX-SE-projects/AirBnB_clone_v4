@@ -8,6 +8,9 @@ $(document).ready(function () {
         }
         const names = Object.values(amenities).join(', ');
         $('.amenities h4').text("Amenities: " + names);
+        if (names === '') {
+        $('.amenities h4').html('&nbsp;');
+        }
     }
     );
 });
